@@ -60,3 +60,4 @@ compile_commands.json
 .DS_Store
 data/rsc/
 push_swap
+push_swap_tester/
