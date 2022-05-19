@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ope_rr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 19:17:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 07:25:49 by aguiri           ###   ########.fr       */
+/*   Created: 2022/05/19 05:33:42 by aguiri            #+#    #+#             */
+/*   Updated: 2022/05/19 07:14:15 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft.h"
+void	ope_rr(t_stack **stack)
+{
+	ope_ra(stack);
+	ope_rb(stack);
+}
 
-# include "operations.h"
-# include "stack.h"
-
-# define PRINT_OPE 0
-
-#endif
+void	do_rr(t_stack **stack)
+{
+	if (PRINT_OPE)
+		ft_printf("rr\n");
+	ope_rr(stack);
+}

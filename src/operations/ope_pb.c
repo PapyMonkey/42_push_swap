@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ope_pb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 19:17:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 07:25:49 by aguiri           ###   ########.fr       */
+/*   Created: 2022/05/19 00:21:31 by aguiri            #+#    #+#             */
+/*   Updated: 2022/05/19 07:12:22 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft.h"
+void	ope_pb(t_stack *stack)
+{
+	t_list	*last_element_a;
 
-# include "operations.h"
-# include "stack.h"
+	if (stack->a == NULL)
+		return ;
+	last_element_a = ft_lstlast(stack->a);
+	ft_lstadd_back(&stack->b, last_element_a);
+	st_rem_last(&stack->a);
+}
 
-# define PRINT_OPE 0
-
-#endif
+void	do_pb(t_stack *stack)
+{
+	if (PRINT_OPE)
+		ft_printf("pb\n");
+	ope_pb(stack);
+}
