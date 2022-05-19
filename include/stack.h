@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:41:32 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 06:43:51 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/19 09:41:09 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct s_stack {
 // Functions - Stack manipulations
 
 // void	st_free(t_stack *stack);
+
+void	st_empy_a(t_stack *stack);
 
 /*
  * \brief			Initialize both stacks thanks to the main's arguments and
