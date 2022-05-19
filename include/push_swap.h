@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:17:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 09:02:19 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/19 10:48:10 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "operations.h"
 # include "stack.h"
 
-# define PRINT_OPE 0
+# define PRINT_OPE 1
 
 /*
  * \brief			Check if the values and the number of parameters is correct.

@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:41:32 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 09:41:09 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/19 10:41:06 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ void	st_print(t_stack *stack);
  * \param lst		First element of the list's address. 
  */
 void	st_rem_last(t_list **lst);
+
+void	st_sort_b(t_stack **stack);
 
 #endif
