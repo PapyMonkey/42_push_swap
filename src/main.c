@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:15:45 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 13:34:50 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/21 03:32:32 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,15 @@ int	main(int argc, char **argv)
 
 	err_args(argc, argv);
 	stack = st_init(argc, argv);
-
-	st_empy_a(stack);
+	// st_print(stack);
+	// st_empy_a(stack);
+	srt_quick_a(&stack);
+	// ft_printf("Coucou le debut toute fin\n");
 	// st_print(stack);
 
 	// ft_printf("\nAPRES L'OPE\n");
-	st_sort_b(&stack);
+	srt_insert_b(&stack);
+	// ft_printf("Coucou le debut toute fin\n");
 	// st_print(stack);
 
 	// ----------------------

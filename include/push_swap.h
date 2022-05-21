@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:17:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 10:48:10 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/20 01:18:47 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,19 @@
 
 # include <limits.h>
 
+// ****************************************************************************
+// Personal library
+
 # include "libft.h"
 
 # include "operations.h"
+# include "sort.h"
 # include "stack.h"
 
 # define PRINT_OPE 1
+
+// ****************************************************************************
+// Functions
 
 /*
  * \brief			Check if the values and the number of parameters is correct.

@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:41:32 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 10:41:06 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/20 03:01:09 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ typedef struct s_stack {
 // ****************************************************************************
 // Functions - Stack manipulations
 
-// void	st_free(t_stack *stack);
+void	st_dig_in_a(t_stack **stack, t_list *element);
+
+void	st_dig_in_b(t_stack **stack, t_list *element);
 
 void	st_empy_a(t_stack *stack);
+
+t_list	*st_grab_before(t_list *lst, t_list *pos);
 
 /*
  * \brief			Initialize both stacks thanks to the main's arguments and
@@ -64,7 +68,5 @@ void	st_print(t_stack *stack);
  * \param lst		First element of the list's address. 
  */
 void	st_rem_last(t_list **lst);
-
-void	st_sort_b(t_stack **stack);
 
 #endif
