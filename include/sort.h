@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 01:15:24 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/20 03:43:13 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/21 05:12:00 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_ptrs {
 
 void	srt_insert_b(t_stack **stack);
 
-void	srt_quick_a(t_stack **stack);
+// void	srt_quick_a(t_stack **stack);
+void	srt_quick_a(t_stack *stack);
 
 #endif

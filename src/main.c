@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:15:45 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/21 03:32:32 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/21 06:47:10 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,16 @@ int	main(int argc, char **argv)
 
 	err_args(argc, argv);
 	stack = st_init(argc, argv);
+
+	// Test du sort
+	// int i;
+	// i = 0;
+	// while (i < stack->size)
+	// 	ft_printf("%d\n", stack->sorted[i++]);
+
 	// st_print(stack);
 	// st_empy_a(stack);
-	srt_quick_a(&stack);
+	srt_quick_a(stack);
 	// ft_printf("Coucou le debut toute fin\n");
 	// st_print(stack);
 
@@ -75,6 +82,7 @@ int	main(int argc, char **argv)
 	
 	ft_lstclear(&(stack->a), foo);
 	ft_lstclear(&(stack->b), foo);
+	free(stack->sorted);
 	free(stack);
 
 	return (EXIT_SUCCESS);

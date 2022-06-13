@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:41:32 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/20 03:01:09 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/05/21 04:47:43 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@
 typedef struct s_stack {
 	struct s_list	*a;
 	struct s_list	*b;
+	int				*sorted;
+	int				size;
+	int				chunks;
 }					t_stack;
 
 // ****************************************************************************
