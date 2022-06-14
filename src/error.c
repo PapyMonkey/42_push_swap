@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 07:36:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/19 08:57:35 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/13 23:57:30 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	err_isnum(char *str)
 {
 	if (*str == '-')
 		str++;
-	while (*str)	
+	while (*str)
 	{
 		if (!ft_isdigit(*str))
 		{
@@ -46,7 +46,6 @@ static int	*err_gen_array(int argc, char **argv)
 	int	i;
 
 	out = malloc(sizeof(int) * (argc - 1));
-	// out[argc] = '\0';
 	if (!out)
 		return (NULL);
 	i = 0;
@@ -86,8 +85,6 @@ void	err_args(int argc, char **argv)
 	while (i < argc)
 	{
 		err_isnum(argv[i]);
-		// err_isint(argv[i]);
-		// if (i + 1 < argc && ft_strncmp)
 		err_isdup(array, i - 1, argc);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 10:00:38 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/21 02:57:31 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/13 23:56:43 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	srt_insert_b(t_stack **stack)
 	t_list	*greater;
 	t_list	*ptr;
 
-	// ft_printf("Coucou le dans insert\n");
 	while ((*stack)->b)
 	{
 		greater = (*stack)->b;
