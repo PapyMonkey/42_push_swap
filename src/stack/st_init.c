@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:45:01 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/21 08:17:20 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/16 15:41:03 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	st_sort_off(t_stack *stack, char **argv)
 	stack->sorted = malloc(sizeof(int) * stack->size);
 	if (!stack->sorted)
 	{
-		ft_printf("Error : malloc() failed\n");
+		ft_putstr_fd("Error : malloc() failed\n", 2);
 		exit (EXIT_FAILURE);
 	}
 	i = 0;

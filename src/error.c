@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 07:36:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/13 23:57:30 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/16 16:10:13 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	err_isnum(char *str)
 	{
 		if (!ft_isdigit(*str))
 		{
-			ft_printf("Error\n");
+			ft_putstr_fd("Error\n", 2);
 			exit (EXIT_FAILURE);
 		}
 		str++;
@@ -29,13 +29,10 @@ static void	err_isnum(char *str)
 
 static void	err_isint(char *str)
 {
-	int	nb;
-
-	nb = ft_atoi(str);
-	ft_printf("Number : %d\n", nb);
-	if (nb < INT_MIN || nb > INT_MAX)
+	if (ft_strncmp(str, "-2147483648", 11) > 0
+		|| ft_strncmp(str, "2147483647", 10) < 0)
 	{
-		ft_printf("Error\n");
+		ft_putstr_fd("Error\n", 2);
 		exit (EXIT_FAILURE);
 	}
 }
@@ -66,7 +63,7 @@ static void	err_isdup(int *arr, int i, int argc)
 	{
 		if (arr[i] == buffer)
 		{
-			ft_printf("Error\n");
+			ft_putstr_fd("Error\n", 2);
 			exit (EXIT_FAILURE);
 		}
 		i++;
@@ -79,12 +76,16 @@ void	err_args(int argc, char **argv)
 	int	i;
 
 	if (argc == 1)
+	{
+		ft_putstr_fd("Error\n", 2);
 		exit (EXIT_FAILURE);
+	}
 	array = err_gen_array(argc, argv);
 	i = 1;
 	while (i < argc)
 	{
 		err_isnum(argv[i]);
+		err_isint(argv[i]);
 		err_isdup(array, i - 1, argc);
 		i++;
 	}
