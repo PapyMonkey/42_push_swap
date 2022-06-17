@@ -6,13 +6,13 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 07:36:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/16 16:10:13 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 13:08:53 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	err_isnum(char *str)
+void	err_isnum(char *str)
 {
 	if (*str == '-')
 		str++;
@@ -27,7 +27,7 @@ static void	err_isnum(char *str)
 	}
 }
 
-static void	err_isint(char *str)
+void	err_isint(char *str)
 {
 	if (ft_strncmp(str, "-2147483648", 11) > 0
 		|| ft_strncmp(str, "2147483647", 10) < 0)
@@ -54,7 +54,7 @@ static int	*err_gen_array(int argc, char **argv)
 	return (out);
 }
 
-static void	err_isdup(int *arr, int i, int argc)
+void	err_isdup(int *arr, int i, int argc)
 {
 	int	buffer;
 

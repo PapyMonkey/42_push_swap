@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:15:45 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/13 23:58:01 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 13:26:50 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack;
 
-	err_args(argc, argv);
 	stack = st_init(argc, argv);
 	srt_quick_a(stack);
 	srt_insert_b(&stack);

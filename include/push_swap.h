@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:17:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/05/21 11:10:05 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 13:37:00 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,29 @@
  * \param argv		Table of string containing the arguments.
  */
 void	err_args(int argc, char **argv);
+
+/*
+ * \brief			Check if there is no duplicate inside the given arguments.
+ *
+ * \param arr		Array containing all the arguments.
+ * \param i			Current position of the number to be compared.
+ * \param argc		Size of the array.
+ */
+void	err_isdup(int *arr, int i, int argc);
+
+/*
+ * \brief			Check if the values inside the str are all corrects ints.
+ *
+ * \param str		String to be tested.
+ */
+void	err_isint(char *str);
+
+/*
+ * \brief			Check if the values inside the str are all numeric
+ * 					characters.
+ *
+ * \param str		String to be tested.
+ */
+void	err_isnum(char *str);
 
 #endif
