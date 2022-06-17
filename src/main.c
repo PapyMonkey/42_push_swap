@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:15:45 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/17 13:26:50 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 15:56:33 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,18 @@ int	main(int argc, char **argv)
 	t_stack	*stack;
 
 	stack = st_init(argc, argv);
-	srt_quick_a(stack);
-	srt_insert_b(&stack);
+	if (srt_is_sorted(stack) != EXIT_SUCCESS)
+	{
+		if (stack->size == 2)
+			do_ra(&stack);
+		else if (stack->size == 3)
+			srt_three(stack);
+		else
+		{
+			srt_quick_a(stack);
+			srt_insert_b(&stack);
+		}
+	}
 	ft_lstclear(&(stack->a), foo);
 	ft_lstclear(&(stack->b), foo);
 	free(stack->sorted);

@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 07:36:49 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/17 13:08:53 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 15:56:14 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	err_isnum(char *str)
 {
 	if (*str == '-')
 		str++;
+	if (*str == '\0')
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit (EXIT_FAILURE);
+	}
 	while (*str)
 	{
 		if (!ft_isdigit(*str))
@@ -29,11 +34,14 @@ void	err_isnum(char *str)
 
 void	err_isint(char *str)
 {
-	if (ft_strncmp(str, "-2147483648", 11) > 0
-		|| ft_strncmp(str, "2147483647", 10) < 0)
+	if (ft_strlen(str) > 9)
 	{
-		ft_putstr_fd("Error\n", 2);
-		exit (EXIT_FAILURE);
+		if ((*str == '-' && ft_strncmp(str, "-2147483648", 11) > 0)
+			|| (*str != '-' && ft_strncmp(str, "2147483647", 10) > 0))
+		{
+			ft_putstr_fd("Error\n", 2);
+			exit (EXIT_FAILURE);
+		}
 	}
 }
 
