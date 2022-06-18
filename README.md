@@ -1,3 +1,22 @@
+# 42_push_swap
+
+## Project instructions & grade
+
+"Because Swap_push isn’t as natural"
+
+| Program name | `push_swap` |
+|:--- |:--- |
+| **Turn in files** | `Makefile, *.h, *.c` |
+| **Makefile** | `NAME, all, clean, fclean, re` |
+| **Arguments** | `stack a : A list of integers` |
+| **External functions** | `read, write, malloc, free, exit` |
+| **Libft authorized** | `Yes` |
+| **Description** | `Sort stacks` |
+
+[aguiri's 42 push_swap Score](https://badge42.vercel.app/api/v2/cl1m1z528009409l5bo2ovzih/project/2623778)
+
+## Detailed instructions
+
 A 42-cursus project where the goal is to sort given range of unique integers using two stacks (A and B) and only following operations:
 
 - `sa` (swap a) : Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
