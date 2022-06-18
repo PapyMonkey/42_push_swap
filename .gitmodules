@@ -1,9 +1,0 @@
-[submodule "lib/libft"]
-	path = lib/libft
-	url = git@github.com:PapyMonkey/42_libft.git
-[submodule "push_swap_visualizer"]
-	path = push_swap_visualizer
-	url = git@github.com:o-reo/push_swap_visualizer.git
-[submodule "push_swap_tester"]
-	path = push_swap_tester
-	url = git@github.com:lmalki-h/push_swap_tester.git
