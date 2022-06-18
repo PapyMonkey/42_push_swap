@@ -6,7 +6,7 @@
 /*   By: aguiri <aguiri@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:15:45 by aguiri            #+#    #+#             */
-/*   Updated: 2022/06/17 15:56:33 by aguiri           ###   ########.fr       */
+/*   Updated: 2022/06/17 19:39:00 by aguiri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	main(int argc, char **argv)
 			do_ra(&stack);
 		else if (stack->size == 3)
 			srt_three(stack);
+		else if (stack->size <= 10)
+			srt_simple_sort(stack);
 		else
 		{
 			srt_quick_a(stack);
